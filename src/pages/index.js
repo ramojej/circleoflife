@@ -1,3 +1,4 @@
 import React from "react"
+import Layout from "../components/Layout"
 
-export default () => <div className="bg-blue-500 container">Hello world!</div>
+export default () => <Layout>Hello world!</Layout>
