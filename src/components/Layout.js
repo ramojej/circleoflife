@@ -1,12 +1,13 @@
 import React from "react"
 import Header from "./Header/Header"
+import ThemeContextWrapper from "../context/theme/ThemeContextWrapper"
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <ThemeContextWrapper className="antialiased">
       <Header />
       {children}
-    </div>
+    </ThemeContextWrapper>
   )
 }
 

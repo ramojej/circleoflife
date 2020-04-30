@@ -1,0 +1,23 @@
+.transition-default {
+  transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.btn {
+  @apply py-3 px-4 text-white text-center transition-default;
+}
+
+.btn:focus {
+  @apply outline-none;
+}
+
+.btn.btn-primary {
+  @apply bg-primary-500;
+}
+
+.btn.btn-primary:hover {
+  @apply bg-primary-400;
+}
+
+.btn.btn-dark {
+  @apply bg-gray-900;
+}
