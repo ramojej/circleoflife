@@ -1,32 +1,38 @@
 import React, { useState, useContext } from "react"
 import { ThemeContext } from "../../context/theme/ThemeContext"
-import { BsMoon, BsSun } from "react-icons/bs"
-import { Link } from "gatsby"
-import logo from "../../images/logo-inverted.svg"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import ThemeSwitcher from "../ThemeSwitcher"
+import Image from "gatsby-image"
 import links from "../../constants/links"
+import styles from "../../css/header.module.css"
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false)
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext)
 
+  const data = useStaticQuery(query)
+
   const onClick = () => {
     setOpen(!isOpen)
   }
 
+  console.log(isDarkMode)
+
+  //console.log(data.logo.childImageSharp)
+
   return (
     <header className="container bg-gray-900 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
       <div className="flex justify-between items-center px-4 py-3 sm:p-0">
-        <div>
-          <img src={logo} alt="Circle of Life" className="h-8" />
+        <div className={styles.imgContainer}>
+          <Image fluid={data.logo.childImageSharp.fluid} alt="Circle of Life" />
+          {/* <img src={logo} alt="Circle of Life" className="h-8" /> */}
         </div>
         <div className="flex sm:hidden items-center">
-          <button
-            type="button"
-            onClick={toggleDarkMode}
-            className="focus:outline-none sm:ml-5 mr-4"
-          >
-            {isDarkMode ? <BsSun className="text-yellow-500" /> : <BsMoon />}
-          </button>
+          <ThemeSwitcher
+            isDarkMode={isDarkMode}
+            toggle={toggleDarkMode}
+            className="sm:hidden"
+          />
           <button
             type="button"
             className="text-gray-500 hover:text-white focus:text-white focus:outline-none block"
@@ -69,15 +75,25 @@ const Header = () => {
           )
         })}
       </div>
-      <button
-        type="button"
-        onClick={toggleDarkMode}
-        className="focus:outline-none hidden sm:ml-5 sm:block"
-      >
-        {isDarkMode ? <BsSun className="text-yellow-500" /> : <BsMoon />}
-      </button>
+      <ThemeSwitcher
+        isDarkMode={isDarkMode}
+        toggle={toggleDarkMode}
+        className="hidden sm:block"
+      />
     </header>
   )
 }
+
+export const query = graphql`
+  query {
+    logo: file(relativePath: { eq: "logo-circ.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
 export default Header

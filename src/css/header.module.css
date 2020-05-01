@@ -1,0 +1,13 @@
+.img-container {
+  width: 150px;
+}
+
+@screen sm {
+  .img-container {
+    width: 300px;
+  }
+}
+
+.img-container img {
+  @apply block;
+}

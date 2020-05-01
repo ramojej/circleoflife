@@ -5,7 +5,7 @@ import styles from "../css/button.module.css"
 
 const Button = ({ type, className, title, disabled }) => {
   const { isDarkMode } = useContext(ThemeContext)
-  console.log(isDarkMode)
+  //console.log(isDarkMode)
   return (
     <button
       type={type}
@@ -29,6 +29,7 @@ Button.propTypes = {
 Button.defaultProps = {
   type: "button",
   disabled: false,
+  className: "",
 }
 
 export default Button
