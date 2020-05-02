@@ -55,9 +55,9 @@ const Header = () => {
       </div>
 
       <div
-        className={`px-2 pt-2 pb-4 bg-primary-700 sm:bg-transparent ${
+        className={`px-2 pt-2 pb-4 sm:bg-transparent ${
           isOpen ? "block" : "hidden"
-        } sm:flex sm:p-0 sm:ml-auto`}
+        } sm:flex sm:p-0 sm:ml-auto ${isDarkMode ? "" : "bg-primary-600"}`}
       >
         {links.map((item, i) => {
           return (
@@ -86,7 +86,7 @@ export const query = graphql`
   query {
     logo: file(relativePath: { eq: "col-logo.png" }) {
       childImageSharp {
-        fluid(maxWidth: 200) {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

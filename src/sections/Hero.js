@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { ThemeContext } from "../context/theme/ThemeContext"
 import GatsbyImage from "gatsby-image"
 import styles from "../css/hero.module.css"
@@ -23,20 +23,22 @@ const Hero = () => {
   const { isDarkMode } = useContext(ThemeContext)
   return (
     <>
-      <section className="container mt-5 sm:mt-24">
-        <div>
+      <section className="container mt-6 sm:mt-24 sm:flex sm:items-center">
+        <div className="sm:w-5/12">
           <h1 className="text-primary-500 text-4xl sm:text-5xl font-extrabold leading-none">
-            Healing and Loving your pets
+            Because they can't tell you what's wrong.
           </h1>
           <p className="text-gray-600 text-lg mt-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            eum repellat ad exercitationem eligendi corrupti modi quam
-            praesentium architecto quia!
+            We deliver the highest standard quality and compassion of veterinary
+            medicine to your furry friends along with our lovely and caring
+            staff.
           </p>
-          <Button title="Learn More" className="mt-3 mb-8" />
+          <Link to="/about">
+            <Button title="Learn More" className="mt-3 mb-8" />
+          </Link>
         </div>
-        <div className="w-6/12 mx-auto">
-          <GatsbyImage fluid={hero.childImageSharp.fluid} />
+        <div className="w-5/12 mx-auto sm:w-3/12">
+          <GatsbyImage fluid={hero.childImageSharp.fluid} alt="Corgi" />
         </div>
       </section>
       <div className={`${isDarkMode ? styles.dark : styles.light}`}>

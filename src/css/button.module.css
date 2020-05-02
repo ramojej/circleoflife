@@ -23,9 +23,13 @@
 }
 
 .btn.btn-dark {
-  @apply bg-gray-900;
+  @apply bg-gray-800;
 }
 
 .btn.btn-dark:hover {
-  @apply bg-gray-800;
+  @apply bg-gray-700;
+}
+
+.btn.btn-dark:active {
+  @apply bg-primary-900;
 }
