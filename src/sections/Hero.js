@@ -4,6 +4,7 @@ import { ThemeContext } from "../context/theme/ThemeContext"
 import GatsbyImage from "gatsby-image"
 import styles from "../css/hero.module.css"
 import Button from "../components/Button"
+import SvgPattern from "../components/SvgPattern"
 
 const query = graphql`
   query {
@@ -24,23 +25,27 @@ const Hero = () => {
   return (
     <>
       <section className="container mt-6 sm:mt-24 sm:flex sm:items-center">
-        <div className="sm:w-5/12">
-          <h1 className="text-primary-500 text-4xl sm:text-5xl font-extrabold leading-none">
+        <div className="sm:w-7/12 lg:w-5/12">
+          <h1 className="text-primary-500 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-none">
             Because they can't tell you what's wrong.
           </h1>
           <p className="text-gray-600 text-lg mt-3">
-            We deliver the highest standard quality and compassion of veterinary
-            medicine to your furry friends along with our lovely and caring
-            staff.
+            We deliver the highest standard quality of veterinary care for our
+            clients and their furry family.
           </p>
           <Link to="/about">
             <Button title="Learn More" className="mt-3 mb-8" />
           </Link>
         </div>
-        <div className="w-5/12 mx-auto sm:w-3/12">
+        <div className="w-5/12 mx-auto sm:w-3/12 z-10 relative">
           <GatsbyImage fluid={hero.childImageSharp.fluid} alt="Corgi" />
         </div>
       </section>
+      <SvgPattern
+        width="200px"
+        height="200px"
+        className="rounded-full absolute"
+      />
       <div className={`${isDarkMode ? styles.dark : styles.light}`}>
         <svg className="fill-current" viewBox="0 0 1440 192">
           <path
