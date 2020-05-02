@@ -1,13 +1,19 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { ThemeContext } from "../context/theme/ThemeContext"
 import GatsbyImage from "gatsby-image"
 
 const About = () => {
   const data = useStaticQuery(query)
 
+  const { isDarkMode } = useContext(ThemeContext)
+  console.log(isDarkMode)
+
   return (
-    <section className="h-56 bg-gray-200 pb-12">
-      <div className="container flex">
+    <section
+      className={`h-56 pb-12 ${isDarkMode ? "bg-gray-800" : "bg-gray-200"}`}
+    >
+      <div className="container grid sm:grid-cols-2 sm:gap-20">
         <div>
           <h2>Welcome</h2>
         </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { ThemeContext } from "./ThemeContext"
 
 export default props => {
-  const [isDarkMode, setDarkMode] = useState()
+  const [isDarkMode, setDarkMode] = useState(false)
 
   //check if browser supports dark scheme
   // const supportsDarkMode = () =>

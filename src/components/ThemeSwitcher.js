@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { BsMoon, BsSun } from "react-icons/bs"
 
 const ThemeSwitcher = props => {
-  console.log(props)
+  //console.log(props)
   return (
     <button
       type="button"
@@ -16,7 +16,7 @@ const ThemeSwitcher = props => {
 }
 
 ThemeSwitcher.propTypes = {
-  //isDarkMode: PropTypes.bool.isRequired,
+  isDarkMode: PropTypes.bool.isRequired,
   toggle: PropTypes.func.isRequired,
   className: PropTypes.string,
 }
