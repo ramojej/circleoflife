@@ -5,13 +5,14 @@ import styles from "../css/button.module.css"
 
 const Button = ({ type, className, title, disabled }) => {
   const { isDarkMode } = useContext(ThemeContext)
-  //console.log(isDarkMode)
+  //console.log(typeof className)
+
   return (
     <button
       type={type}
       className={`${className} ${styles.btn} ${
         isDarkMode ? styles.btnDark : styles.btnPrimary
-      }`}
+      } ${className.includes("btn-services") ? styles.btnServices : ""}`}
       disabled={disabled}
     >
       {title}

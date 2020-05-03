@@ -1,0 +1,5 @@
+.service-container {
+  width: 100px;
+  height: 100px;
+  @apply rounded-full bg-primary-200 mx-auto;
+}

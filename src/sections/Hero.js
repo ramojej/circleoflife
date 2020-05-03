@@ -34,7 +34,7 @@ const Hero = () => {
             clients and their furry family.
           </p>
           <Link to="/about">
-            <Button title="Learn More" className="mt-3 mb-8" />
+            <Button title="Learn More" className="mt-3 mb-8 inline-block" />
           </Link>
         </div>
         <div className="w-5/12 mx-auto sm:w-3/12 z-10 relative">

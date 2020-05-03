@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Hero from "../sections/Hero"
-import About from "../sections/About"
+import Services from "../sections/Services"
 
 export default () => (
   <Layout>
     <Hero />
-    <About />
+    <Services />
   </Layout>
 )

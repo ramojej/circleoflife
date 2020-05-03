@@ -3,7 +3,7 @@
 }
 
 .btn {
-  @apply inline-block py-3 px-5 shadow-lg uppercase tracking-wider font-semibold text-sm rounded-lg text-white text-center transition-default;
+  @apply py-3 px-5 shadow-lg uppercase tracking-wider font-semibold text-sm rounded-lg text-white text-center transition-default;
 }
 
 .btn:focus {
@@ -24,6 +24,10 @@
 
 .btn.btn-dark {
   @apply bg-gray-800;
+}
+
+.btn.btn-dark.btn-services {
+  @apply bg-gray-600;
 }
 
 .btn.btn-dark:hover {
