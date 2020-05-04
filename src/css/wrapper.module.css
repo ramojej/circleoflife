@@ -14,6 +14,16 @@
   @apply text-gray-400;
 }
 
+.dark h1,
+.dark h2 {
+  @apply text-white;
+}
+
+.light h1,
+.light h2 {
+  @apply text-primary-800;
+}
+
 .light h4 {
   @apply text-gray-700;
 }

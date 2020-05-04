@@ -26,7 +26,7 @@ const Hero = () => {
     <>
       <section className="container mt-6 sm:mt-24 sm:flex sm:items-center">
         <div className="sm:w-7/12 lg:w-5/12">
-          <h1 className="text-primary-500 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-none">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-none">
             Because they can't tell you what's wrong.
           </h1>
           <p className="text-gray-600 text-lg mt-3">

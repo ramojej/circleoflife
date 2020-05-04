@@ -19,9 +19,7 @@ const Services = () => {
     >
       <div className="container">
         <div className="py-12">
-          <h2 className="text-center text-3xl mb-2 font-bold text-primary-500">
-            Services
-          </h2>
+          <h2 className="text-center text-3xl mb-2 font-bold">Services</h2>
           <p className="mb-12 sm:w-6/12 sm:mx-auto text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
             aliquid itaque voluptatem eligendi veniam. Iure corrupti possimus

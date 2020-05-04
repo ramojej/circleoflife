@@ -24,9 +24,7 @@ const Doctor = () => {
     <section className="py-16 text-center lg:text-left container lg:w-9/12 lg:py-24">
       <div className="lg:flex lg:items-center">
         <div className="lg:w-6/12">
-          <h2 className="font-bold text-primary-500 text-3xl">
-            Meet the Doctor
-          </h2>
+          <h2 className="font-bold text-3xl">Meet the Doctor</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
             repudiandae asperiores, eius provident deleniti facere adipisci nemo
