@@ -1,0 +1,11 @@
+.img-container {
+  @apply overflow-visible mx-auto;
+  max-width: 350px;
+}
+
+.img-container:before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  @apply rounded-full bg-primary-200 block absolute z-10 bottom-0;
+}

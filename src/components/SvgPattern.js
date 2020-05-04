@@ -3,7 +3,13 @@ import PropTypes from "prop-types"
 import styles from "../css/svgpattern.module.css"
 
 const SvgPattern = ({ className }) => {
-  return <div className={`${className} ${styles.svgPattern}`}></div>
+  return (
+    <div
+      className={`${className} ${styles.svgPattern} ${
+        className.includes("doctor-pattern") ? styles.doctorPattern : ""
+      }`}
+    ></div>
+  )
 }
 
 SvgPattern.propTypes = {

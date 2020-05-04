@@ -6,6 +6,12 @@
   height: 150px;
 }
 
+.svg-pattern.doctor-pattern {
+  @apply right-0 top-0 z-30;
+  width: 100px;
+  height: 100px;
+}
+
 @screen md {
   .svg-pattern {
     top: 9rem;
