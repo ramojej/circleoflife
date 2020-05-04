@@ -10,7 +10,7 @@ const ThemeSwitcher = props => {
       onClick={props.toggle}
       className={`focus:outline-none sm:ml-5 mr-4 ${props.className}`}
     >
-      {props.isDarkMode ? <BsSun className="text-yellow-500" /> : <BsMoon />}
+      {props.isDarkMode ? <BsMoon /> : <BsSun className="text-yellow-500" />}
     </button>
   )
 }

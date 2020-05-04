@@ -2,16 +2,16 @@
   @apply bg-gray-900 text-white;
 }
 
-.dark section.bg-gray-800 {
-  @apply bg-gray-800;
-}
-
 .dark a {
   @apply text-white;
 }
 
 .dark p {
   @apply text-gray-400;
+}
+
+.dark .tae {
+  color: brown;
 }
 
 .dark h1,
