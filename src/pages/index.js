@@ -4,6 +4,7 @@ import Hero from "../sections/Hero"
 import Services from "../sections/Services"
 import Doctor from "../sections/Doctor"
 import Promo from "../sections/Promo"
+import Blog from "../sections/Blog"
 
 export default () => (
   <Layout>
@@ -11,5 +12,6 @@ export default () => (
     <Services />
     <Doctor />
     <Promo />
+    <Blog />
   </Layout>
 )

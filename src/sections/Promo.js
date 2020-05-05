@@ -1,9 +1,9 @@
 import React, { useContext } from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { ThemeContext } from "../context/theme/ThemeContext"
 //import GatsbyImage from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
-import { BsArrowRight } from "react-icons/bs"
+import ArrowRightLink from "../components/ArrowRightLink"
 
 const query = graphql`
   query {
@@ -22,7 +22,7 @@ const Promo = () => {
   const { isDarkMode } = useContext(ThemeContext)
 
   return (
-    <section className="pt-4 pb-16">
+    <section className="pt-8 pb-16">
       <div className="container">
         <div className="rounded-lg overflow-hidden shadow-2xl lg:flex">
           {/* <div className="w-full xl:w-5/12" style={{ transform: `scaleX(-1)` }}>
@@ -43,12 +43,7 @@ const Promo = () => {
               laborum, iste nesciunt veritatis ea laboriosam, suscipit
               repudiandae velit ratione reiciendis totam!
             </p>
-            <Link
-              to="/"
-              className="text-primary-500 font-bold text-xl hover:underline mt-5 inline-block"
-            >
-              Learn more <BsArrowRight className="inline-block text-2xl" />
-            </Link>
+            <ArrowRightLink to="/" title="Learn more" />
           </div>
         </div>
       </div>
