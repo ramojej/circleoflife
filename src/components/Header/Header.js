@@ -22,7 +22,12 @@ const Header = () => {
     <header className="container sm:flex sm:justify-between sm:px-4 sm:py-4 sm:items-center">
       <div className="flex justify-between items-center px-4 py-3 sm:p-0">
         <div className={styles.imgContainer}>
-          <Image fluid={data.logo.childImageSharp.fluid} alt="Circle of Life" />
+          <Link to="/">
+            <Image
+              fluid={data.logo.childImageSharp.fluid}
+              alt="Circle of Life"
+            />
+          </Link>
           {/* <img src={logo} alt="Circle of Life" className="h-8" /> */}
         </div>
         <div className="flex sm:hidden items-center">

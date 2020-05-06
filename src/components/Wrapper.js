@@ -6,7 +6,7 @@ const Wrapper = ({ children }) => {
   const { isDarkMode } = useContext(ThemeContext)
   return (
     <div
-      className={`antialiased overflow-hidden relative ${
+      className={`antialiased overflow-hidden relative flex flex-col min-h-screen ${
         isDarkMode ? styles.dark : styles.light
       }`}
     >

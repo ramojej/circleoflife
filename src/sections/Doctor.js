@@ -21,7 +21,7 @@ const Doctor = () => {
   const { doctor } = useStaticQuery(query)
 
   return (
-    <section className="py-16 text-center lg:text-left container lg:w-9/12 lg:py-24">
+    <section className="py-16 text-center lg:text-left container lg:w-8/12 lg:py-32">
       <div className="lg:flex lg:items-center">
         <div className="lg:w-6/12">
           <h2 className="font-bold text-3xl">Meet the Doctor</h2>
