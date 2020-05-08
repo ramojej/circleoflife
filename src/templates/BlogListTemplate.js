@@ -1,10 +1,15 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql, Link } from "gatsby"
+import { ThemeContext } from "../context/theme/ThemeContext"
 import Layout from "../components/Layout"
 import BlogCard from "../components/Blog/BlogCard"
 import Banner from "../sections/Banner"
+import styles from "../css/bloglist.module.css"
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa"
 
 const BlogListTemplate = props => {
+  const { isDarkMode } = useContext(ThemeContext)
+
   const { currentPage, numPages } = props.pageContext
 
   const prevPage = currentPage - 1 === 1 ? `/blog` : `/blog/${currentPage - 1}`
@@ -21,9 +26,45 @@ const BlogListTemplate = props => {
   return (
     <Layout>
       <Banner title="Blog" img={data.bannerImg.childImageSharp.fluid} />
-      <section>
-        <div className="container">
-          <h2>Blog</h2>
+      <section className="py-16 lg:pt-20">
+        <div className={`${styles.bloglistContainer} container`}>
+          {data.posts.edges.map(({ node }) => {
+            return <BlogCard key={node.id} blog={node} />
+          })}
+        </div>
+        <div
+          className={`container ${styles.linkContainer} ${
+            isDarkMode ? styles.darklinkContainer : styles.lightlinkContainer
+          }`}
+        >
+          {!isFirst && (
+            <Link to={prevPage} className="mr-5 hover:underline">
+              <FaAngleLeft className="inline-block" />
+              Prev
+            </Link>
+          )}
+
+          <div className={styles.numlinksContainer}>
+            {Array.from({ length: numPages }, (_, i) => {
+              return (
+                <Link
+                  to={`/blog/${i === 0 ? "" : i + 1}`}
+                  key={i}
+                  className={`${
+                    i + 1 === currentPage ? styles.currentLink : ""
+                  } ${styles.linkPages}`}
+                >
+                  {i + 1}
+                </Link>
+              )
+            })}
+          </div>
+
+          {!isLast && (
+            <Link to={nextPage} className="ml-5 hover:underline">
+              Next <FaAngleRight className="inline-block" />
+            </Link>
+          )}
         </div>
       </section>
     </Layout>
