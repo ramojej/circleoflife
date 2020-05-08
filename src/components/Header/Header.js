@@ -69,9 +69,10 @@ const Header = () => {
             <Link
               key={i}
               to={item.path}
-              className={`text-primary-200 block capitalize hover:text-primary-600 px-2 py-1 tracking-wider sm:mt-0 sm:text-gray-700 ${
-                i === 0 ? "" : "mt-1 sm:ml-2"
+              className={`text-primary-200 block capitalize hover:text-primary-600 px-2 py-1 tracking-wider sm:mt-0 sm:text-gray-700 sm:px-0 ${
+                i === 0 ? "" : "mt-1 sm:ml-8"
               }`}
+              activeClassName={styles.activeLink}
             >
               {item.text}
             </Link>

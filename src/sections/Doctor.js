@@ -41,6 +41,7 @@ const Doctor = () => {
             <GatsbyImage
               fluid={doctor.childImageSharp.fluid}
               className={`rounded-full w-9/12 mx-auto relative z-20`}
+              alt="Doc Lyra Ibong of Circle of Life Veterinary Clinic"
             />
             <SvgPattern
               width="200px"

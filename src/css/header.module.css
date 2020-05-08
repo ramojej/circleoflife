@@ -6,6 +6,17 @@
   .img-container {
     width: 200px;
   }
+
+  .active-link {
+    @apply relative;
+  }
+
+  .active-link:after {
+    content: "";
+    height: 2px;
+    bottom: -5px;
+    @apply absolute bg-primary-500 w-full left-0;
+  }
 }
 
 .img-container img {

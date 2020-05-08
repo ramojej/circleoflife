@@ -1,0 +1,25 @@
+.banner {
+  min-height: 15vh;
+  @apply flex items-center;
+}
+
+.banner h2 {
+  @apply text-white text-2xl font-bold tracking-wide relative z-20;
+}
+
+.overlay {
+  @apply absolute top-0 bottom-0 w-full bg-gray-800 z-10;
+  opacity: 0.8;
+}
+
+@screen sm {
+  .banner {
+    min-height: 300px;
+  }
+}
+
+@screen md {
+  .banner h2 {
+    @apply text-4xl;
+  }
+}
