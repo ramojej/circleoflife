@@ -1,0 +1,15 @@
+.singleblog-container {
+  @apply shadow-lg px-4 py-8 -mt-8 relative z-20 bg-white rounded-lg mb-10;
+}
+
+.singleblog-container article {
+  @apply mt-4;
+}
+
+.singleblog-container article p {
+  @apply mb-4 text-lg;
+}
+
+.main-content h1 {
+  @apply text-3xl font-bold text-gray-800;
+}

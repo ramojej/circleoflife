@@ -1,9 +1,9 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "../../context/theme/ThemeContext"
 import PropTypes from "prop-types"
+import BlogInfo from "../../components/Blog/BlogInfo"
 import ArrowRightLink from "../../components/ArrowRightLink"
 import BackgroundImage from "gatsby-background-image"
-import { FaRegClock, FaRegCalendarAlt } from "react-icons/fa"
 import styles from "../../css/blog.module.css"
 
 const BlogCard = ({ blog }) => {
@@ -28,18 +28,12 @@ const BlogCard = ({ blog }) => {
       <div
         className={`${styles.content} ${isDarkMode ? styles.darkContent : ""}`}
       >
-        <div className={styles.blogCategory}>{category}</div>
-        <h3 className={styles.blogTitle}>{title}</h3>
-        <div>
-          <div className={styles.dateInfo}>
-            <div className="flex items-center mr-3">
-              <FaRegCalendarAlt className="mr-1" /> {createdAt}
-            </div>
-            <div className="flex items-center">
-              <FaRegClock className="mr-1" /> {timeCreated}
-            </div>
-          </div>
-        </div>
+        <BlogInfo
+          title={title}
+          createdAt={createdAt}
+          timeCreated={timeCreated}
+          category={category}
+        />
 
         {/* truncate to only 80 chars */}
         <p className="mt-4">{`${shortDesc.shortDesc.substring(0, 80)}...`}</p>

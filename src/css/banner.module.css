@@ -3,8 +3,12 @@
   @apply flex items-center;
 }
 
+.banner.single-blog {
+  min-height: 25vh;
+}
+
 .banner h2 {
-  @apply text-white text-2xl font-bold tracking-wide relative z-20;
+  @apply text-white text-2xl font-bold tracking-wide relative z-20 text-center;
 }
 
 .overlay {
@@ -12,9 +16,17 @@
   opacity: 0.8;
 }
 
+.single-blog .overlay {
+  display: none;
+}
+
 @screen sm {
   .banner {
     min-height: 300px;
+  }
+
+  .banner.single-blog {
+    min-height: 75vh;
   }
 }
 

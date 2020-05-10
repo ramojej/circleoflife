@@ -26,7 +26,7 @@ const BlogListTemplate = props => {
   return (
     <Layout>
       <Banner title="Blog" img={data.bannerImg.childImageSharp.fluid} />
-      <section className="py-16 lg:pt-20">
+      <section className={styles.bloglistSection}>
         <div className={`${styles.bloglistContainer} container`}>
           {data.posts.edges.map(({ node }) => {
             return <BlogCard key={node.id} blog={node} />
@@ -38,8 +38,8 @@ const BlogListTemplate = props => {
           }`}
         >
           {!isFirst && (
-            <Link to={prevPage} className="mr-5 hover:underline">
-              <FaAngleLeft className="inline-block" />
+            <Link to={prevPage} className={styles.paginateWord}>
+              <FaAngleLeft />
               Prev
             </Link>
           )}
@@ -61,8 +61,11 @@ const BlogListTemplate = props => {
           </div>
 
           {!isLast && (
-            <Link to={nextPage} className="ml-5 hover:underline">
-              Next <FaAngleRight className="inline-block" />
+            <Link
+              to={nextPage}
+              className={`${styles.paginateWord} ${styles.paginateNext}`}
+            >
+              Next <FaAngleRight />
             </Link>
           )}
         </div>

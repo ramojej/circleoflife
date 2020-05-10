@@ -15,6 +15,16 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  data.blogPosts.edges.forEach(({ node }) => {
+    createPage({
+      path: `blog/${node.slug}`,
+      component: path.resolve("./src/templates/SingleBlog.js"),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+
   //for blogs pagination
   // amount of posts
   const posts = data.blogPosts.edges

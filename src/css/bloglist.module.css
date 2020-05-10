@@ -1,9 +1,13 @@
+.bloglist-section {
+  @apply py-16;
+}
+
 .link-pages {
   @apply bg-primary-300 rounded-sm py-1 px-2 font-bold text-sm;
 }
 
 .linkContainer {
-  @apply flex mt-5;
+  @apply flex mt-5 items-center justify-center;
 }
 
 .lightlink-container .link-pages {
@@ -34,6 +38,18 @@
   @apply mr-2;
 }
 
+.paginate-word {
+  @apply mr-5 flex items-center text-gray-700;
+}
+
+.paginate-word.paginate-next {
+  @apply ml-5 mr-0;
+}
+
+.paginate-word:hover {
+  @apply underline;
+}
+
 @screen md {
   .bloglist-container {
     @apply grid grid-cols-2 gap-5;
@@ -43,5 +59,9 @@
 @screen lg {
   .bloglist-container {
     @apply grid-cols-3 gap-10 row-gap-5;
+  }
+
+  .bloglist-section {
+    @apply pt-20;
   }
 }

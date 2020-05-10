@@ -1,0 +1,11 @@
+.date-info {
+  @apply flex text-primary-800 text-sm font-bold items-center;
+}
+
+.blog-title {
+  @apply font-bold text-2xl text-gray-800 truncate my-1;
+}
+
+.blog-category {
+  @apply rounded-lg bg-primary-300 text-primary-800 px-2 py-1 uppercase font-bold text-center inline-block text-xs tracking-wide;
+}
