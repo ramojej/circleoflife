@@ -1,0 +1,63 @@
+.sidebar-container {
+  @apply mt-6;
+}
+
+aside h2 {
+  @apply text-xl font-bold;
+}
+
+.tags {
+  @apply mt-4;
+}
+
+.newsletter {
+  @apply mt-8;
+}
+
+.sidebar-container form label {
+  @apply mt-4 block text-gray-800 font-bold;
+}
+
+.sidebar-container form input[type="email"] {
+  @apply border-gray-400 border-solid border-2 w-full p-2 rounded-lg mt-2 text-gray-800;
+}
+
+.sidebar-container form input[type="email"]:focus {
+  @apply outline-none shadow-outline;
+}
+
+.sidebar-container form input[type="submit"] {
+  @apply bg-primary-500 text-white block rounded-lg mt-4 w-full p-2 font-semibold text-lg shadow-lg;
+}
+
+.sidebar-container form input[type="submit"]:hover {
+  @apply cursor-pointer bg-primary-400;
+}
+
+.sidebar-container form input[type="submit"]:focus {
+  @apply outline-none shadow-outline bg-primary-400;
+}
+
+.sidebar-container form input[type="submit"]:active {
+  @apply bg-primary-600;
+}
+
+.sidebar-container form .error-p {
+  @apply text-red-500 font-semibold mt-2 text-sm;
+}
+
+.darkform form label {
+  @apply text-gray-300;
+}
+
+.sidebar-container .darkform form input[type="email"] {
+  @apply bg-gray-700 text-gray-200 border-gray-600;
+}
+
+.tags a {
+  @apply py-1 px-2 bg-primary-500 text-white rounded-md;
+}
+
+.tags a:not(:last-child) {
+  @apply mr-2;
+}

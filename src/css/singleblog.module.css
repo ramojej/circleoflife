@@ -17,3 +17,17 @@
 .main-content h1 {
   @apply text-3xl font-bold text-gray-800;
 }
+
+@screen lg {
+  .singleblog-container {
+    @apply grid grid-cols-3 gap-16 max-w-5xl;
+  }
+
+  .main-content {
+    @apply col-span-2;
+  }
+
+  .side {
+    @apply col-span-1;
+  }
+}

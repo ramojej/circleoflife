@@ -4,6 +4,7 @@ import { ThemeContext } from "../context/theme/ThemeContext"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/Layout"
 import Banner from "../sections/Banner"
+import Sidebar from "../components/Blog/Sidebar"
 import BlogInfo from "../components/Blog/BlogInfo"
 import styles from "../css/singleblog.module.css"
 
@@ -69,6 +70,7 @@ const SingleBlog = ({ data }) => {
           </div>
           <article>{documentToReactComponents(json, options)}</article>
         </div>
+        <Sidebar className={styles.side} />
       </div>
     </Layout>
   )
