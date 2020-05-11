@@ -21,8 +21,6 @@ const BlogListTemplate = props => {
 
   const { data } = props
 
-  console.log(data)
-
   return (
     <Layout>
       <Banner title="Blog" img={data.bannerImg.childImageSharp.fluid} />

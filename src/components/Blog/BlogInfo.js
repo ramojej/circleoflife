@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ThemeContext } from "../../context/theme/ThemeContext"
 import PropTypes from "prop-types"
 import { FaRegClock, FaRegCalendarAlt } from "react-icons/fa"
 import styles from "../../css/bloginfo.module.css"
 
 const BlogInfo = ({ title, createdAt, timeCreated, category }) => {
+  const { isDarkMode } = useContext(ThemeContext)
   return (
-    <>
+    <div className={isDarkMode ? styles.darkContent : ""}>
       <div className={styles.blogCategory}>{category}</div>
       <h3 className={styles.blogTitle}>{title}</h3>
       <div>
@@ -18,7 +20,7 @@ const BlogInfo = ({ title, createdAt, timeCreated, category }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

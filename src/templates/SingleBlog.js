@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql } from "gatsby"
+import { ThemeContext } from "../context/theme/ThemeContext"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/Layout"
 import Banner from "../sections/Banner"
@@ -7,6 +8,8 @@ import BlogInfo from "../components/Blog/BlogInfo"
 import styles from "../css/singleblog.module.css"
 
 const SingleBlog = ({ data }) => {
+  const { isDarkMode } = useContext(ThemeContext)
+
   const {
     createdAt,
     timeCreated,
@@ -50,7 +53,11 @@ const SingleBlog = ({ data }) => {
   return (
     <Layout>
       <Banner singleblog img={featureImage.fluid} />
-      <div className={`container ${styles.singleblogContainer}`}>
+      <div
+        className={`container ${styles.singleblogContainer} ${
+          isDarkMode ? styles.singleblogDark : ""
+        }`}
+      >
         <div className={styles.mainContent}>
           <div>
             <BlogInfo

@@ -9,3 +9,11 @@
 .blog-category {
   @apply rounded-lg bg-primary-300 text-primary-800 px-2 py-1 uppercase font-bold text-center inline-block text-xs tracking-wide;
 }
+
+.dark-content .blog-title {
+  @apply text-white;
+}
+
+.dark-content .date-info {
+  @apply text-primary-200;
+}
