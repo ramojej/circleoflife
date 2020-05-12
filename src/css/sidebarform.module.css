@@ -1,0 +1,3 @@
+form .error-p {
+  @apply text-red-500 font-semibold mt-2 text-sm;
+}

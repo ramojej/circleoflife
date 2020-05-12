@@ -42,10 +42,6 @@ aside h2 {
   @apply bg-primary-600;
 }
 
-.sidebar-container form .error-p {
-  @apply text-red-500 font-semibold mt-2 text-sm;
-}
-
 .darkform form label {
   @apply text-gray-300;
 }
