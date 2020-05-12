@@ -4,7 +4,7 @@ import addToMailchimp from "gatsby-plugin-mailchimp"
 import styles from "../../css/sidebarform.module.css"
 
 const SidebarForm = () => {
-  const { register, handleSubmit, errors, formState } = useForm()
+  const { register, handleSubmit, errors, formState, setError } = useForm()
 
   const { isSubmitting } = formState
 
@@ -14,7 +14,8 @@ const SidebarForm = () => {
     try {
       const result = await addToMailchimp(data.email)
       if (result.result === "error") {
-        throw new Error("Email is already subscribed.")
+        setError("email", "validate", "Email is already")
+        //throw new Error("Email is already subscribed.")
       } else {
         console.log(result)
         clearVisibleForm(false)
@@ -30,6 +31,8 @@ const SidebarForm = () => {
     //   }, 3000)
     // })
   }
+
+  console.log(errors)
 
   return (
     <div>
@@ -58,12 +61,16 @@ const SidebarForm = () => {
                 placeholder="lyra@gmail.com"
                 ref={register({ required: true })}
               />
-              {errors.email && (
-                <p className={styles.errorP}>Email is required.</p>
+              {errors.email && errors.email.type === "required" && (
+                <p className={styles.errorP}>Email is required</p>
+              )}
+              {errors.email && errors.email.type === "validate" && (
+                <p className={styles.errorP}>Email is already subscribed.</p>
               )}
               <input
                 type="submit"
                 value={isSubmitting ? "Submitting..." : "Submit"}
+                disabled={isSubmitting}
               />
             </div>
           </form>
