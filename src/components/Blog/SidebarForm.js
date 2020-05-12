@@ -14,10 +14,10 @@ const SidebarForm = () => {
     try {
       const result = await addToMailchimp(data.email)
       if (result.result === "error") {
-        setError("email", "validate", "Email is already")
+        setError("email", "validate")
         //throw new Error("Email is already subscribed.")
       } else {
-        console.log(result)
+        //console.log(result)
         clearVisibleForm(false)
       }
     } catch (error) {
@@ -32,7 +32,7 @@ const SidebarForm = () => {
     // })
   }
 
-  console.log(errors)
+  //console.log(errors)
 
   return (
     <div>
