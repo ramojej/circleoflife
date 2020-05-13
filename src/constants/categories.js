@@ -1,14 +1,14 @@
 export default [
   {
-    path: "/dog",
+    path: "/Dog",
     text: "dog",
   },
   {
-    path: "/cat",
+    path: "/Cat",
     text: "cat",
   },
   {
-    path: "/general",
+    path: "/General",
     text: "general",
   },
 ]

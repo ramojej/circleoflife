@@ -9,6 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             slug
+            category
           }
         }
       }
@@ -21,6 +22,16 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve("./src/templates/SingleBlog.js"),
       context: {
         slug: node.slug,
+      },
+    })
+  })
+
+  data.blogPosts.edges.forEach(({ node }) => {
+    createPage({
+      path: `category/${node.category}`,
+      component: path.resolve("./src/templates/CategoryTemplate.js"),
+      context: {
+        category: node.category,
       },
     })
   })
