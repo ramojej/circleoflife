@@ -54,6 +54,14 @@ aside h2 {
   @apply py-1 px-2 bg-primary-500 text-white rounded-md;
 }
 
+.tags a:hover {
+  @apply bg-primary-400;
+}
+
+.tags a:active {
+  @apply bg-primary-600;
+}
+
 .tags a:not(:last-child) {
   @apply mr-2;
 }
