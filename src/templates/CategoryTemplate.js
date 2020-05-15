@@ -1,10 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React, { useContext } from "react"
+import { graphql, Link } from "gatsby"
+import { ThemeContext } from "../context/theme/ThemeContext"
 import Layout from "../components/Layout"
 import Banner from "../sections/Banner"
+import Sidebar from "../components/Blog/Sidebar"
+import styles from "../css/category.module.css"
 
 const CategoryTemplate = props => {
-  console.log(props)
+  const { isDarkMode } = useContext(ThemeContext)
 
   const { pathContext, data } = props
 
@@ -18,16 +21,26 @@ const CategoryTemplate = props => {
         }
         img={data.bannerImg.childImageSharp.fluid}
       />
-      <div>
-        <div>
+      <div
+        className={`${styles.mainContainer} ${isDarkMode ? styles.dark : ""}`}
+      >
+        <div className="lg:col-span-2">
           {data.blogPosts.edges.map(({ node }, index) => {
             return (
-              <div key={index}>
+              <Link
+                key={index}
+                to={`/blog/${node.slug}`}
+                className={styles.eachArticle}
+              >
                 <h2>{node.title}</h2>
-              </div>
+                <time>{node.createdAt}</time>
+                <p>{node.shortDesc.shortDesc}</p>
+                <h3>Read full story</h3>
+              </Link>
             )
           })}
         </div>
+        <Sidebar className="lg:col-span-1" />
       </div>
     </Layout>
   )

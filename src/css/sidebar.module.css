@@ -65,3 +65,9 @@ aside h2 {
 .tags a:not(:last-child) {
   @apply mr-2;
 }
+
+@screen lg {
+  .sidebar-container {
+    @apply mt-0;
+  }
+}

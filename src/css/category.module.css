@@ -1,0 +1,43 @@
+.main-container {
+  @apply max-w-5xl mx-auto px-4 py-4;
+}
+
+.each-article {
+  @apply bg-gray-100 rounded shadow px-4 py-4 mb-4 block text-gray-600;
+}
+
+.dark .each-article {
+  @apply bg-gray-800;
+}
+
+.each-article h2 {
+  @apply font-semibold text-2xl;
+}
+
+.each-article time {
+  @apply text-sm;
+}
+
+.each-article h3 {
+  @apply mt-4 font-bold text-lg text-primary-500;
+}
+
+.each-article:hover h3 {
+  @apply underline;
+}
+
+.each-article:active h3 {
+  @apply text-primary-600;
+}
+
+@screen md {
+  .main-container {
+    @apply px-8;
+  }
+}
+
+@screen lg {
+  .main-container {
+    @apply grid gap-16 pt-6 grid-cols-3 py-10;
+  }
+}
