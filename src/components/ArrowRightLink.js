@@ -3,12 +3,20 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { BsArrowRight } from "react-icons/bs"
 
-const ArrowRightLink = ({ className, to, title }) => {
-  return (
-    <Link className={className} to={to}>
-      {title} <BsArrowRight className="inline-block text-2xl" />
-    </Link>
-  )
+const ArrowRightLink = ({ className, to, title, blogcard }) => {
+  if (blogcard) {
+    return (
+      <h3 className={className}>
+        {title} <BsArrowRight className="inline-block text-2xl" />
+      </h3>
+    )
+  } else {
+    return (
+      <Link className={className} to={to}>
+        {title} <BsArrowRight className="inline-block text-2xl" />
+      </Link>
+    )
+  }
 }
 
 ArrowRightLink.propTypes = {

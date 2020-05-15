@@ -55,7 +55,7 @@ const SingleBlog = ({ data }) => {
     <Layout>
       <Banner singleblog img={featureImage.fluid} />
       <div
-        className={`container ${styles.singleblogContainer} ${
+        className={`${styles.singleblogContainer} ${
           isDarkMode ? styles.singleblogDark : ""
         }`}
       >

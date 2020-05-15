@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { Link } from "gatsby"
 import { ThemeContext } from "../../context/theme/ThemeContext"
 import PropTypes from "prop-types"
 import BlogInfo from "../../components/Blog/BlogInfo"
@@ -20,7 +21,7 @@ const BlogCard = ({ blog }) => {
   } = blog
 
   return (
-    <div className={styles.blogCard}>
+    <Link to={`/blog/${slug}`} className={styles.blogCard}>
       <BackgroundImage
         fluid={featureImage.fluid}
         className={styles.cardImage}
@@ -38,12 +39,13 @@ const BlogCard = ({ blog }) => {
         {/* truncate to only 80 chars */}
         <p className="mt-4">{`${shortDesc.shortDesc.substring(0, 80)}...`}</p>
         <ArrowRightLink
+          blogcard
           title="Read More"
           className="text-primary-500 font-bold text-lg hover:underline mt-5 inline-block"
           to={`/blog/${slug}`}
         />
       </div>
-    </div>
+    </Link>
   )
 }
 

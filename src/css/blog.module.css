@@ -1,5 +1,5 @@
 .blog-card {
-  @apply rounded-lg overflow-hidden mb-10 shadow-lg;
+  @apply rounded-lg overflow-hidden mb-10 shadow-lg block;
 }
 
 .blog-card .card-image {
@@ -13,12 +13,21 @@
 .blog-card .content.dark-content {
   @apply bg-gray-700;
 }
-.blog-card .content.dark-content .blog-title {
+.blog-card .content.dark-content .blog-title,
+.blog-card .content.dark-content h3 {
   @apply text-white;
 }
 
 .blog-card .content.dark-content .date-info {
   @apply text-primary-200;
+}
+
+.blog-card:hover .content h3:last-child {
+  @apply underline;
+}
+
+.blog-card:active .content h3:last-child {
+  @apply text-primary-600;
 }
 
 @screen sm {

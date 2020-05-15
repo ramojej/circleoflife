@@ -1,5 +1,5 @@
 .singleblog-container {
-  @apply shadow-lg px-4 py-8 -mt-8 relative z-20 bg-white rounded-lg mb-10;
+  @apply shadow-lg px-4 py-8 -mt-8 relative z-20 bg-white rounded-lg mb-10 max-w-5xl mx-auto;
 }
 
 .singleblog-container.singleblog-dark {

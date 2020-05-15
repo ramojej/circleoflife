@@ -1,5 +1,5 @@
 .main-container {
-  @apply max-w-5xl mx-auto px-4 py-4;
+  @apply max-w-5xl mx-auto px-4 py-10;
 }
 
 .each-article {
