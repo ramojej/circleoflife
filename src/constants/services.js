@@ -10,7 +10,7 @@ export default [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
   },
   {
-    service: "vaccination",
+    service: "vaccinations",
     icon: <FaSyringe />,
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
@@ -24,6 +24,66 @@ export default [
   {
     service: "surgery",
     icon: <GiScalpel />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "boarding",
+    icon: <FaDog />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "grooming",
+    icon: <FaDog />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "emergency services",
+    icon: <FaDog />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "laboratory",
+    icon: <FaDog />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "pharmacy",
+    icon: <FaDog />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "radiology",
+    icon: <FaDog />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "microchipping & identification",
+    icon: <FaDog />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "nutritional counseling",
+    icon: <FaDog />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "dentistry",
+    icon: <FaDog />,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
+  },
+  {
+    service: "dermatology",
+    icon: <FaDog />,
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque.",
   },
