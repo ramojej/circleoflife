@@ -3,13 +3,14 @@ import Layout from "../components/Layout"
 import Banner from "../sections/Banner"
 import { graphql } from "gatsby"
 import GatsbyImage from "gatsby-image"
+import styles from "../css/about.module.css"
 
 export default ({ data }) => (
   <Layout>
     <Banner title="About Us" img={data.bannerImg.childImageSharp.fluid} />
-    <div className="container px-4 py-12 sm:flex sm:items-center sm:py-16">
-      <div className="sm:w-6/12">
-        <h2 className="text-2xl font-bold">Welcome to Circle of Life</h2>
+    <div className={styles.aboutContainer}>
+      <div>
+        <h2>Welcome to Circle of Life</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam eos
           rem unde, saepe nam iusto eveniet quas laboriosam, voluptate doloribus
@@ -22,7 +23,7 @@ export default ({ data }) => (
           eius, dolorum impedit recusandae quibusdam cum reprehenderit!
         </p>
       </div>
-      <div className="mt-8 rounded-lg shadow-lg overflow-hidden sm:w-5/12 sm:mx-auto sm:mt-0">
+      <div>
         <GatsbyImage fluid={data.aboutImg.childImageSharp.fluid} />
       </div>
     </div>

@@ -1,0 +1,56 @@
+.sec-one {
+  @apply max-w-5xl mx-auto px-4 py-8;
+}
+
+.sec-one h2 {
+  @apply text-2xl font-bold;
+}
+
+.service-item {
+  @apply flex items-center capitalize;
+}
+
+.list-container {
+  @apply mt-4 text-gray-600;
+}
+
+.sec-one > div:last-child {
+  @apply mt-8;
+}
+
+.sec-one img {
+  border-radius: 155px 45px 225px 75px/15px 125px 15px 155px;
+  @apply shadow-sm;
+}
+
+.dark .list-container {
+  @apply text-gray-300;
+}
+
+.service-item svg {
+  @apply mr-2 text-primary-500;
+}
+
+@screen md {
+  .list-container {
+    @apply grid grid-cols-4;
+  }
+
+  .list-container > div {
+    @apply col-span-2;
+  }
+}
+
+@screen lg {
+  .sec-one {
+    @apply grid grid-cols-4 gap-10 items-center py-16;
+  }
+
+  .sec-one > div {
+    @apply col-span-2;
+  }
+
+  .sec-one > div:last-child {
+    @apply mt-0;
+  }
+}

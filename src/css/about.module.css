@@ -1,0 +1,30 @@
+.about-container {
+  @apply max-w-5xl mx-auto px-4 py-8;
+}
+
+.about-container h2 {
+  @apply text-2xl font-bold;
+}
+
+.about-container > div:last-child {
+  @apply mt-8;
+}
+
+.about-container > div:last-child img {
+  border-radius: 155px 45px 225px 75px/15px 125px 15px 155px;
+  @apply shadow-sm;
+}
+
+@screen sm {
+  .about-container {
+    @apply flex items-center py-16;
+  }
+
+  .about-container > div:first-child {
+    @apply w-6/12;
+  }
+
+  .about-container > div:last-child {
+    @apply w-5/12 mx-auto mt-0;
+  }
+}

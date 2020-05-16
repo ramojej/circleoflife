@@ -7,7 +7,7 @@
 }
 
 .dark p {
-  @apply text-gray-400;
+  @apply text-gray-300;
 }
 
 .dark .tae {
