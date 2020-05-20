@@ -59,13 +59,22 @@ const SidebarForm = () => {
                 name="email"
                 type="email"
                 placeholder="lyra@gmail.com"
-                ref={register({ required: true })}
+                ref={register({
+                  required: true,
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                    message: "Invalid email address.",
+                  },
+                })}
               />
               {errors.email && errors.email.type === "required" && (
-                <p className={styles.errorP}>Email is required</p>
+                <p className={styles.errorP}>Email is required.</p>
               )}
               {errors.email && errors.email.type === "validate" && (
                 <p className={styles.errorP}>Email is already subscribed.</p>
+              )}
+              {errors.email && errors.email.type === "pattern" && (
+                <p className={styles.errorP}>{errors.email.message}</p>
               )}
               <input
                 type="submit"

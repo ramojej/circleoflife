@@ -10,10 +10,6 @@
   @apply text-gray-300;
 }
 
-.dark .tae {
-  color: brown;
-}
-
 .dark h1,
 .dark h2 {
   @apply text-white;
@@ -30,4 +26,46 @@
 
 .light p {
   @apply text-gray-600;
+}
+
+form label {
+  @apply block text-gray-800 font-bold;
+}
+
+form input[type="email"],
+form input[type="text"],
+form textarea {
+  @apply border-gray-400 border-solid border-2 w-full p-2 rounded-lg mt-2 text-gray-800;
+}
+
+form input[type="email"]:focus,
+form input[type="text"]:focus,
+form textarea:focus {
+  @apply outline-none shadow-outline;
+}
+
+form input[type="submit"] {
+  @apply bg-primary-500 text-white block rounded-lg mt-4 w-full p-2 font-semibold text-lg shadow-lg;
+}
+
+form input[type="submit"]:hover {
+  @apply cursor-pointer bg-primary-400;
+}
+
+form input[type="submit"]:focus {
+  @apply outline-none shadow-outline bg-primary-400;
+}
+
+form input[type="submit"]:active {
+  @apply bg-primary-600;
+}
+
+.dark label {
+  @apply text-gray-300;
+}
+
+.dark form input[type="email"],
+.dark form input[type="text"],
+.dark textarea {
+  @apply bg-gray-700 text-gray-200 border-gray-600;
 }
