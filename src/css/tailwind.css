@@ -5,4 +5,14 @@ section {
   @apply px-4;
 }
 
+.main-cont {
+  @apply max-w-5xl mx-auto px-4 py-10;
+}
+
+@screen md {
+  .main-cont {
+    @apply py-16;
+  }
+}
+
 @tailwind utilities;

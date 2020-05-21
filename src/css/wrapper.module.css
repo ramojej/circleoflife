@@ -35,7 +35,7 @@ form label {
 form input[type="email"],
 form input[type="text"],
 form textarea {
-  @apply border-gray-400 border-solid border-2 w-full p-2 rounded-lg mt-2 text-gray-800;
+  @apply border-gray-400 border-solid border-2 w-full p-2 rounded-lg mt-2 text-gray-800 block;
 }
 
 form input[type="email"]:focus,
