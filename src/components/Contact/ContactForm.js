@@ -30,17 +30,19 @@ const ContactForm = () => {
           id="name"
           name="name"
           placeholder="Walter White"
-          ref={register({ required: true, minLength: 2, maxLength: 100 })}
+          ref={register({
+            required: "Name is required",
+            minLength: {
+              value: 2,
+              message: "Name must be atleast 2 characters",
+            },
+            maxLength: {
+              value: 100,
+              message: "Name should not be more than 100 characters",
+            },
+          })}
         />
-        {errors.name && errors.name.type === "required" && (
-          <p>Name is required</p>
-        )}
-        {errors.name && errors.name.type === "minLength" && (
-          <p>Name must be atleast 2 characters</p>
-        )}
-        {errors.name && errors.name.type === "maxLength" && (
-          <p>Name must be less than 100 characters</p>
-        )}
+        {errors.name && errors.name.message && <p>{errors.name.message}</p>}
       </div>
       <div className="mt-4">
         <label htmlFor="email">Email</label>

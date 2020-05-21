@@ -69,3 +69,8 @@ form input[type="submit"]:active {
 .dark textarea {
   @apply bg-gray-700 text-gray-200 border-gray-600;
 }
+
+.light form p,
+.dark form p {
+  @apply text-red-500 font-semibold mt-2 text-sm;
+}
