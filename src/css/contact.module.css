@@ -12,15 +12,15 @@
 
 @screen md {
   .section-one {
-    @apply grid grid-cols-2 gap-16;
+    @apply grid grid-cols-2 gap-16 items-center;
   }
 
   .form-container {
-    @apply p-8 shadow-2xl rounded-lg;
+    @apply py-12 px-8 shadow-2xl rounded-lg;
   }
 
   .section-one .form-container h2 {
-    @apply my-4;
+    @apply mb-4;
   }
 
   .section-one h2 {

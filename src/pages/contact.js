@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Banner from "../sections/Banner"
 import ContactForm from "../components/Contact/ContactForm"
+import ContactDetails from "../components/Contact/ContactDetails"
 import styles from "../css/contact.module.css"
 
 const contact = props => {
@@ -12,9 +13,11 @@ const contact = props => {
       <Banner title="Contact Us" img={data.bannerImg.childImageSharp.fluid} />
       <div className="main-cont">
         <div className={styles.sectionOne}>
-          <div className={styles.formContainer}>
-            <h2>Send us a message</h2>
-            <ContactForm />
+          <div>
+            <div className={styles.formContainer}>
+              <h2>Send us a message</h2>
+              <ContactForm />
+            </div>
           </div>
           <div>
             <h2 className="mt-8 text-2xl font-bold">Get in touch</h2>
@@ -30,6 +33,7 @@ const contact = props => {
             </p>
           </div>
         </div>
+        <ContactDetails />
       </div>
     </Layout>
   )

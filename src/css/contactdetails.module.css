@@ -1,0 +1,52 @@
+.details-container {
+  @apply mt-12;
+}
+
+.details-container a,
+.details-container > div {
+  @apply block bg-gray-100 p-8 flex flex-col items-center justify-center rounded-lg mt-6;
+}
+
+.details-container.dark > div,
+.details-container.dark a {
+  @apply bg-gray-700;
+}
+
+.details-container p {
+  @apply mb-0 font-semibold text-center;
+}
+
+.details-container a div,
+.details-container > div div {
+  height: 60px;
+  width: 60px;
+  @apply bg-primary-300 rounded-full mx-auto flex items-center justify-center transition-all ease-in duration-200;
+}
+
+.details-container a div svg,
+.details-container > div div svg {
+  @apply text-primary-800 text-xl;
+}
+
+.details-container h4 {
+  @apply m-2 font-semibold text-lg;
+}
+
+.details-container a:hover div {
+  @apply bg-primary-200;
+}
+
+.details-container a:active div {
+  @apply bg-primary-400;
+}
+
+@screen md {
+  .details-container a,
+  .details-container > div {
+    @apply mt-0;
+  }
+
+  .details-container {
+    @apply grid grid-cols-2 gap-10 mt-16;
+  }
+}
