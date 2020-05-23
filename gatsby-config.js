@@ -4,6 +4,15 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Circle of Life Veterinary Clinic",
+    description:
+      "Welcome to Circle of Life! This is the website of our FUTURE veterinary clinic headed by Dr. Lyra A. Ibong.",
+    author: "Jejomar Dorongon",
+    twitterUsername: "@jejomarss",
+    image: "/imgcard.jpg",
+    siteUrl: "www.jejomarpogi.com",
+  },
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

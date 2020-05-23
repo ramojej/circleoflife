@@ -9,13 +9,13 @@ const ContactForm = () => {
 
   const { isSubmitting } = formState
 
-  console.log(errors)
+  console.log(isSubmitting)
 
   const onSubmit = async data => {
     await new Promise(resolve => {
       setTimeout(() => {
         console.log(data)
-        console.log(errors)
+        //console.log(errors)
         resolve()
       }, 3000)
     })
