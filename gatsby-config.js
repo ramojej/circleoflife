@@ -11,7 +11,7 @@ module.exports = {
     author: "Jejomar Dorongon",
     twitterUsername: "@jejomarss",
     image: "/imgcard.jpg",
-    siteUrl: "https://www.jejomarpogi.com",
+    siteUrl: "https://circleoflife.netlify.app",
   },
   plugins: [
     `gatsby-transformer-sharp`,
