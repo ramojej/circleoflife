@@ -1,3 +1,7 @@
+.svg-container {
+  margin-top: -1px;
+}
+
 div.light {
   @apply text-white bg-gray-200;
 }

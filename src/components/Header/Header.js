@@ -38,7 +38,7 @@ const Header = () => {
           />
           <button
             type="button"
-            className="text-gray-500 hover:text-white focus:text-gray-500 focus:outline-none block"
+            className="text-gray-500 hover:text-white focus:text-gray-500 focus:outline-none active:text-gray-500 block"
             onClick={onClick}
           >
             <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">

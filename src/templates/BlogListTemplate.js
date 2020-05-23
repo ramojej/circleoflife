@@ -21,7 +21,7 @@ const BlogListTemplate = props => {
 
   const { data } = props
 
-  console.log(props)
+  //console.log(props)
 
   return (
     <Layout>

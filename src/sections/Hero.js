@@ -46,7 +46,11 @@ const Hero = () => {
         height="200px"
         className="rounded-full absolute"
       />
-      <div className={`${isDarkMode ? styles.dark : styles.light}`}>
+      <div
+        className={`${styles.svgContainer} ${
+          isDarkMode ? styles.dark : styles.light
+        }`}
+      >
         <svg className="fill-current" viewBox="0 0 1440 192">
           <path
             fillOpacity="1"
