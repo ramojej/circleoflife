@@ -1,5 +1,6 @@
 .svg-container {
   margin-top: -1px;
+  @apply relative z-0;
 }
 
 div.light {

@@ -24,7 +24,7 @@ const Hero = () => {
   const { isDarkMode } = useContext(ThemeContext)
   return (
     <>
-      <section className="container mt-6 sm:mt-24 sm:flex sm:items-center">
+      <section className="container mt-6 sm:mt-24 sm:flex sm:items-center relative z-10">
         <div className="sm:w-7/12 lg:w-5/12">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-none">
             Because they can't tell you what's wrong.
