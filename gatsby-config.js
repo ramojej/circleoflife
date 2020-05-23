@@ -11,7 +11,7 @@ module.exports = {
     author: "Jejomar Dorongon",
     twitterUsername: "@jejomarss",
     image: "/imgcard.jpg",
-    siteUrl: "www.jejomarpogi.com",
+    siteUrl: "https://www.jejomarpogi.com",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -26,6 +26,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `lato\:300,400,700, 900`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
+    {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [require("tailwindcss"), require("autoprefixer")()],
@@ -34,18 +43,28 @@ module.exports = {
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        printRejected: false,
+        printRejected: true,
         develop: false,
         tailwind: true,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `lato\:300,400,700, 900`, // you can also specify font weights and styles
+        whitelistPatternsChildren: [
+          /section/,
+          /container/,
+          /main/,
+          /dark/,
+          /footer/,
+          /blog/,
+          /each/,
+          /sec/,
+          /service/,
+          /svg/,
+          /btn/,
+          /active/,
+          /date/,
+          /transition/,
+          /link/,
+          /paginate/,
+          /form/,
         ],
-        display: "swap",
       },
     },
     {
