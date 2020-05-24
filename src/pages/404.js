@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Button from "../components/Button"
 import GatsbyImage from "gatsby-image"
+import SEO from "../components/SEO"
 
 const query = graphql`
   query {
@@ -20,6 +21,7 @@ const Error = () => {
   const { cat } = useStaticQuery(query)
   return (
     <Layout>
+      <SEO title="404 Page not found" />
       <section className="container pt-8 flex flex-col">
         <div className="sm:w-6/12">
           <h2 className="text-primary-800 text-2xl font-bold leading-tight">

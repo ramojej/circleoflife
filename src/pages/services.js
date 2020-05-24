@@ -3,11 +3,13 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Banner from "../sections/Banner"
 import SectionOne from "../components/Services/ServicesPageSectionOne"
+import SEO from "../components/SEO"
 
 const services = props => {
   const { data } = props
   return (
     <Layout>
+      <SEO title="Services" />
       <Banner title="Services" img={data.bannerImg.childImageSharp.fluid} />
       <SectionOne />
     </Layout>

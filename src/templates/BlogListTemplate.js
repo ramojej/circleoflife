@@ -4,6 +4,7 @@ import { ThemeContext } from "../context/theme/ThemeContext"
 import Layout from "../components/Layout"
 import BlogCard from "../components/Blog/BlogCard"
 import Banner from "../sections/Banner"
+import SEO from "../components/SEO"
 import styles from "../css/bloglist.module.css"
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa"
 
@@ -25,6 +26,7 @@ const BlogListTemplate = props => {
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <Banner title="Blog" img={data.bannerImg.childImageSharp.fluid} />
       <section className={styles.bloglistSection}>
         <div className={`${styles.bloglistContainer} container`}>

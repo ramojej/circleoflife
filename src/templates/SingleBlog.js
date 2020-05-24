@@ -6,6 +6,7 @@ import Layout from "../components/Layout"
 import Banner from "../sections/Banner"
 import Sidebar from "../components/Blog/Sidebar"
 import BlogInfo from "../components/Blog/BlogInfo"
+import SEO from "../components/SEO"
 import styles from "../css/singleblog.module.css"
 
 const SingleBlog = ({ data }) => {
@@ -53,6 +54,7 @@ const SingleBlog = ({ data }) => {
   }
   return (
     <Layout>
+      <SEO title={title} article />
       <Banner singleblog img={featureImage.fluid} />
       <div
         className={`${styles.singleblogContainer} ${

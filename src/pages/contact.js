@@ -4,12 +4,14 @@ import Layout from "../components/Layout"
 import Banner from "../sections/Banner"
 import ContactForm from "../components/Contact/ContactForm"
 import ContactDetails from "../components/Contact/ContactDetails"
+import SEO from "../components/SEO"
 import styles from "../css/contact.module.css"
 
 const contact = props => {
   const { data } = props
   return (
     <Layout>
+      <SEO title="Contact Us" />
       <Banner title="Contact Us" img={data.bannerImg.childImageSharp.fluid} />
       <div className="main-cont">
         <div className={styles.sectionOne}>

@@ -4,6 +4,7 @@ import { ThemeContext } from "../context/theme/ThemeContext"
 import Layout from "../components/Layout"
 import Banner from "../sections/Banner"
 import Sidebar from "../components/Blog/Sidebar"
+import SEO from "../components/SEO"
 import styles from "../css/category.module.css"
 
 const CategoryTemplate = props => {
@@ -13,6 +14,7 @@ const CategoryTemplate = props => {
 
   return (
     <Layout>
+      <SEO title={pathContext.category} />
       <Banner
         title={
           pathContext.category === "General"
