@@ -6,6 +6,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Circle of Life Veterinary Clinic",
+    titleTemplate: "%s · Circle of Life Veterinary Clinic",
     description:
       "Welcome to Circle of Life! This is the website of our FUTURE veterinary clinic headed by Dr. Lyra A. Ibong.",
     author: "Jejomar Dorongon",

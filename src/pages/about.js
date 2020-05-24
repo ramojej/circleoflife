@@ -4,9 +4,11 @@ import Banner from "../sections/Banner"
 import { graphql } from "gatsby"
 import GatsbyImage from "gatsby-image"
 import styles from "../css/about.module.css"
+import SEO from "../components/SEO"
 
 export default ({ data }) => (
   <Layout>
+    <SEO title="About" />
     <Banner title="About Us" img={data.bannerImg.childImageSharp.fluid} />
     <div className={styles.aboutContainer}>
       <div>
