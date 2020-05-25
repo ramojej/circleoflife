@@ -33,7 +33,11 @@ const Doctor = () => {
             ratione provident modi!
           </p>
           <Link to="/about" aria-label="Know more about the doctor">
-            <Button title="Read More" className="mt-3 mb-8 inline-block" />
+            <Button
+              title="About the team"
+              className="mt-3 mb-8 inline-block"
+              arialabel="Know more about the Doctor"
+            />
           </Link>
         </div>
         <div className="mt-8 lg:w-6/12 lg:mt-0">
