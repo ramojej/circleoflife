@@ -43,6 +43,7 @@ const Services = () => {
             <Button
               title="View All Services"
               className="mt-6 mx-auto block btn-services"
+              arialabel="View More Services being offered by Circle of Life"
             />
           </Link>
         </div>

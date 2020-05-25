@@ -27,11 +27,11 @@
 }
 
 .btn.btn-dark.btn-services {
-  @apply bg-gray-600;
+  @apply bg-gray-700;
 }
 
 .btn.btn-dark:hover {
-  @apply bg-gray-700;
+  @apply bg-gray-600;
 }
 
 .btn.btn-dark:active {

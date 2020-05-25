@@ -23,6 +23,7 @@ const Footer = () => {
                   key={index}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={item.label}
                   className={`${index === 0 ? "mr-2" : ""} ${
                     styles.footerSocial
                   }`}

@@ -40,6 +40,7 @@ const Header = () => {
             type="button"
             className="text-gray-500 focus:text-gray-500 focus:outline-none block"
             onClick={onClick}
+            aria-label="Menu"
           >
             <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
               {isOpen && (

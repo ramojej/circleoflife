@@ -8,6 +8,7 @@ const ThemeSwitcher = props => {
     <button
       type="button"
       onClick={props.toggle}
+      aria-label="Theme Switcher"
       className={`focus:outline-none sm:ml-5 mr-4 ${props.className}`}
     >
       {props.isDarkMode ? <BsMoon /> : <BsSun className="text-yellow-500" />}

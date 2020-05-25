@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { ThemeContext } from "../context/theme/ThemeContext"
 import styles from "../css/button.module.css"
 
-const Button = ({ type, className, title, disabled }) => {
+const Button = ({ type, className, title, disabled, arialabel }) => {
   const { isDarkMode } = useContext(ThemeContext)
   //console.log(typeof className)
 
@@ -14,6 +14,7 @@ const Button = ({ type, className, title, disabled }) => {
         isDarkMode ? styles.btnDark : styles.btnPrimary
       } ${className.includes("btn-services") ? styles.btnServices : ""}`}
       disabled={disabled}
+      aria-label={arialabel}
     >
       {title}
     </button>
@@ -25,6 +26,7 @@ Button.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
   disabled: PropTypes.bool,
+  arialabel: PropTypes.string,
 }
 
 Button.defaultProps = {
