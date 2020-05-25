@@ -43,7 +43,7 @@ const Promo = () => {
               laborum, iste nesciunt veritatis ea laboriosam, suscipit
               repudiandae velit ratione reiciendis totam!
             </p>
-            <ArrowRightLink to="/" title="Learn more" />
+            <ArrowRightLink to="/services" title="Learn more" />
           </div>
         </div>
       </div>

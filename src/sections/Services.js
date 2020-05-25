@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { Link } from "gatsby"
 import { ThemeContext } from "../context/theme/ThemeContext"
 import services from "../constants/services"
 import Service from "../components/Services/Service"
@@ -38,10 +39,12 @@ const Services = () => {
               )
             })}
           </div>
-          <Button
-            title="View All Services"
-            className="mt-6 mx-auto block btn-services"
-          />
+          <Link to="/services">
+            <Button
+              title="View All Services"
+              className="mt-6 mx-auto block btn-services"
+            />
+          </Link>
         </div>
       </div>
     </section>

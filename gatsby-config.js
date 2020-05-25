@@ -19,11 +19,20 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-playground`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://circleoflife.netlify.app",
+        sitemap: "https://circleoflife.netlify.app/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {

@@ -10,16 +10,16 @@ import styles from "../css/category.module.css"
 const CategoryTemplate = props => {
   const { isDarkMode } = useContext(ThemeContext)
 
-  const { pathContext, data } = props
+  const { pageContext, data } = props
 
   return (
     <Layout>
-      <SEO title={pathContext.category} />
+      <SEO title={pageContext.category} />
       <Banner
         title={
-          pathContext.category === "General"
+          pageContext.category === "General"
             ? "Anything under the sun"
-            : "Articles about " + pathContext.category
+            : "Articles about " + pageContext.category
         }
         img={data.bannerImg.childImageSharp.fluid}
       />

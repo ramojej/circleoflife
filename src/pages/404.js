@@ -22,8 +22,11 @@ const Error = () => {
   return (
     <Layout>
       <SEO title="404 Page not found" />
-      <section className="container pt-8 flex flex-col">
-        <div className="sm:w-6/12">
+      <section
+        className="container flex flex-col pt-8 md:pt-16"
+        style={{ minHeight: "calc(100vh - 197px)" }}
+      >
+        <div className=" text-center">
           <h2 className="text-primary-800 text-2xl font-bold leading-tight">
             Sorry. The page you were looking for doesn't exist.
           </h2>
@@ -35,11 +38,11 @@ const Error = () => {
             <Button title="Back to Home" className="mt-3 mb-8 inline-block" />
           </Link>
         </div>
-        <div className="mt-auto w-full sm:w-5/12">
+        <div className="mt-auto w-full">
           <GatsbyImage
             fluid={cat.childImageSharp.fluid}
             alt="Chubby cat"
-            className="w-full mx-auto"
+            className="mx-auto max-w-xl"
           />
         </div>
       </section>
