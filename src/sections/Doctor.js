@@ -32,7 +32,7 @@ const Doctor = () => {
             saepe doloremque, asperiores non mollitia sequi voluptatem nam
             ratione provident modi!
           </p>
-          <Link to="/about">
+          <Link to="/about" aria-label="Know more about the doctor">
             <Button title="Read More" className="mt-3 mb-8 inline-block" />
           </Link>
         </div>
