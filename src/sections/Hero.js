@@ -33,12 +33,8 @@ const Hero = () => {
             We deliver the highest standard quality of veterinary care for our
             clients and their furry family.
           </p>
-          <Link to="/about">
-            <Button
-              title="Learn More"
-              className="mt-3 mb-8 inline-block"
-              arialabel="Learn more about Circle of Life"
-            />
+          <Link to="/about" aria-label="Know more about Circle of Life">
+            <Button title="Learn More" className="mt-3 mb-8 inline-block" />
           </Link>
         </div>
         <div className="w-5/12 mx-auto sm:w-3/12 z-10 relative">
