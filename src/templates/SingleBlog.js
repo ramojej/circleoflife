@@ -19,6 +19,7 @@ const SingleBlog = ({ data }) => {
     category,
     blogContent: { json },
     featureImage,
+    shortDesc,
   } = data.getPost
 
   //get images from richtext
@@ -52,9 +53,12 @@ const SingleBlog = ({ data }) => {
       },
     },
   }
+
+  console.log(featureImage.fluid)
+
   return (
     <Layout>
-      <SEO title={title} article />
+      <SEO title={title} article description={shortDesc.shortDesc} />
       <Banner singleblog img={featureImage.fluid} />
       <div
         className={`${styles.singleblogContainer} ${
@@ -85,6 +89,9 @@ export const query = graphql`
       timeCreated: createdAt(formatString: "hh:mm a")
       title
       category
+      shortDesc {
+        shortDesc
+      }
       blogContent {
         json
       }

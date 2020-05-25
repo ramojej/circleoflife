@@ -3,6 +3,10 @@
   @apply relative z-0;
 }
 
+.svg-container svg {
+  transform: scale(1.000001);
+}
+
 div.light {
   @apply text-white bg-gray-200;
 }
