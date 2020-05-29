@@ -83,7 +83,7 @@ const Header = () => {
       <ThemeSwitcher
         isDarkMode={isDarkMode}
         toggle={toggleDarkMode}
-        className="hidden sm:block"
+        className="hidden sm:inline-flex"
       />
     </header>
   )
