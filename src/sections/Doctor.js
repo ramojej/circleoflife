@@ -10,7 +10,7 @@ const query = graphql`
     doctor: file(relativePath: { eq: "doc-lyra.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
