@@ -11,7 +11,7 @@ const query = graphql`
     hero: file(relativePath: { eq: "hero-full-trimmed.png" }) {
       childImageSharp {
         fluid(maxWidth: 320) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }
