@@ -22,8 +22,8 @@ const Doctor = () => {
 
   return (
     <section className="py-16 text-center lg:text-left container lg:w-8/12 lg:py-32">
-      <div className="lg:flex lg:items-center">
-        <div className="lg:w-6/12">
+      <div className="lg:grid lg:grid-cols-2 lg:items-center">
+        <div>
           <h2 className="font-bold text-3xl">Meet the Doctor</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
@@ -40,7 +40,7 @@ const Doctor = () => {
             />
           </Link>
         </div>
-        <div className="mt-8 lg:w-6/12 lg:mt-0">
+        <div className="mt-8 lg:mt-0">
           <div className={`relative ${styles.imgContainer}`}>
             <GatsbyImage
               fluid={doctor.childImageSharp.fluid}
