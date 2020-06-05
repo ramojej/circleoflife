@@ -93,7 +93,7 @@ export const query = graphql`
   query {
     logo: file(relativePath: { eq: "col-logo.png" }) {
       childImageSharp {
-        fluid(maxWidth: 220) {
+        fluid(maxWidth: 260) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
