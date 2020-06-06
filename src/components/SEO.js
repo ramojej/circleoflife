@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description, image, article, contentful }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -20,7 +20,7 @@ const SEO = ({ title, description, image, article }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: contentful ? image : `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   }
 
@@ -30,6 +30,7 @@ const SEO = ({ title, description, image, article }) => {
       titleTemplate={titleTemplate}
       htmlAttributes={{ lang: "en" }}
     >
+      <meta name="title" property="og:title" content={seo.title} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 

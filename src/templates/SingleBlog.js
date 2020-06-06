@@ -54,11 +54,17 @@ const SingleBlog = ({ data }) => {
     },
   }
 
-  console.log(featureImage.fluid)
+  //console.log(featureImage.fluid.src)
 
   return (
     <Layout>
-      <SEO title={title} article description={shortDesc.shortDesc} />
+      <SEO
+        title={title}
+        article
+        description={shortDesc.shortDesc}
+        image={`https:${featureImage.fluid.src}`}
+        contentful
+      />
       <Banner singleblog img={featureImage.fluid} />
       <div
         className={`${styles.singleblogContainer} ${
