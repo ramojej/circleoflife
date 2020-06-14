@@ -11,7 +11,7 @@ const query = graphql`
     hero: file(relativePath: { eq: "hero-full-trimmed.png" }) {
       childImageSharp {
         fluid(maxWidth: 320) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
@@ -38,7 +38,12 @@ const Hero = () => {
           </Link>
         </div>
         <div className="w-5/12 mx-auto sm:w-3/12 z-10 relative">
-          <GatsbyImage fluid={hero.childImageSharp.fluid} alt="Corgi" />
+          <GatsbyImage
+            fluid={hero.childImageSharp.fluid}
+            alt="Corgi"
+            loading="eager"
+            fadeIn={false}
+          />
         </div>
       </section>
       <SvgPattern
