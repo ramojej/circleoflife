@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "../context/theme/ThemeContext"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import links from "../constants/social-links"
 import styles from "../css/footer.module.css"
 
@@ -18,7 +19,7 @@ const Footer = () => {
           <div className="flex items-center justify-center">
             {links.map((item, index) => {
               return (
-                <a
+                <OutboundLink
                   href={item.link}
                   key={index}
                   target="_blank"
@@ -29,7 +30,7 @@ const Footer = () => {
                   }`}
                 >
                   {item.icon}
-                </a>
+                </OutboundLink>
               )
             })}
           </div>
