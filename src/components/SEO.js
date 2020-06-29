@@ -17,6 +17,8 @@ const SEO = ({ title, description, image, article, contentful }) => {
     twitterUsername,
   } = site.siteMetadata
 
+  //check if props are passed, if not use the default
+
   const seo = {
     title: title ? `${title} | ${defaultTitle}` : defaultTitle,
     description: description || defaultDescription,
